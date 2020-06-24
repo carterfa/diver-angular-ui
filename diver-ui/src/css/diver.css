@@ -1,0 +1,35 @@
+body{
+background: rgb(9,9,121);
+background: linear-gradient(0deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+label{
+font-weight: bold;
+font-size: 1.5em;
+color: white;
+}
+
+a {
+text-decoration: none;
+}
+
+h1, h3, th, td, a{
+color: white
+}
+h1, h3{
+font-weight: bold;
+font-size: 2em;
+
+}
+
+.register-btn{
+  margin: 1em
+}
+
+.login-btn{
+  margin: 1em
+}
+
+.back-btn{
+margin-bottom: 1.5em;
+}

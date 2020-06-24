@@ -1,0 +1,35 @@
+<div class="container">
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th>Birthday</th>
+      <th>Certified Date</th>
+      <th>Organization</th>
+      <th>Country</th>
+      <th>Total Dives</th>
+    </tr>
+    <tr *ngFor="let diver of divers">
+      <td>
+        <a [routerLink]="['/admin/view', diver.id]">{{diver.name}}</a>
+      </td>
+      <td>
+        {{diver.phone}}
+      </td>
+      <td>
+        {{diver.email}}
+      </td>
+      <td>
+        {{diver.gender}}
+      </td>
+      <td>{{diver.birthday}}</td>
+      <td>{{diver.certified}}</td>
+      <td>{{diver.organization}}</td>
+      <td>{{diver.country}}</td>
+      <td>{{diver.totalDives}}</td>
+    </tr>
+  </table>
+  <div style="text-align: center; margin: 2em"><button class="btn btn-danger" (click)="logout()">Log Out</button></div>
+</div>
