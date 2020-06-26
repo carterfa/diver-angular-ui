@@ -7,11 +7,11 @@ import * as auth0 from 'auth0-js';
 export class AuthService {
 
   auth0 = new auth0.WebAuth({
-    clientID: 'gSW30fSGc1L1tEBqYLW434ZgSMRD9SJp',
+    clientID: 'gChj4rTjZTPkW9Cty5xliPH6ZRTxVFTN',
     domain: 'carterfa.us.auth0.com',
     responseType: 'token id_token',
-    audience: 'http://localhost:8080',
-    redirectUri: 'http://localhost:4200/callback',
+    audience: 'https://diver-registry.herokuapp.com/',
+    redirectUri: 'https://diver-angular-ui.herokuapp.com/callback',
     scope: 'openid view:registration view:registrations'
   });
 

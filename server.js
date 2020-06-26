@@ -18,7 +18,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes proxy to point to spring boot server
-app.use('/server', proxy('http://localhost:8080'));
+app.use('/server', proxy('https://diver-registry.herokuapp.com/'));
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
@@ -28,7 +28,7 @@ app.get('*', (req, res) => {
 /**
  * Get port from environment and store in Express.
  */
- const port = process.env.port|| '4200';
+const port = process.env.PORT || '4200';
 app.set('port', port);
 
 /**

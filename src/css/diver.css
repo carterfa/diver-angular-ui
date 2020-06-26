@@ -22,14 +22,6 @@ font-size: 2em;
 
 }
 
-.register-btn{
-  margin: 1em
-}
-
-.login-btn{
-  margin: 1em
-}
-
-.back-btn{
-margin-bottom: 1.5em;
+.btn {
+  margin: 1em;
 }

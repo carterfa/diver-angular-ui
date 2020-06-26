@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
 
     processLogin(data){
       if (data){
-
+        this.validMessage = "You're in our system!"
       }else{
         this.validMessage = "Id and password combination is incorrect."
       }
