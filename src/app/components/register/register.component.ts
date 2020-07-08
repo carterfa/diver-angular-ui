@@ -34,7 +34,8 @@ export class RegisterComponent implements OnInit {
 
   submitRegistration(){
   if (this.diverform.valid){
-    console.log(this.diverform.value);
+    //console.log(this.diverform.value);
+    this.validMessage = "Sending data to server...";
     this.diverService.createDiverRegistration(this.diverform.value).subscribe(
     data => { this.diver = data;
     this.diverform.reset();

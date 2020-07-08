@@ -20,6 +20,7 @@ app.use(express.static(path.join(__dirname, 'dist/diver-ui')));
 // Set our api routes proxy to point to spring boot server
 app.use('/server', proxy('https://diver-registry.herokuapp.com/'));
 
+
 // Catch all other routes and return the index file
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist/diver-ui/index.html'));

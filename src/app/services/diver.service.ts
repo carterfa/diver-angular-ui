@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json'})
@@ -43,7 +42,7 @@ export class DiverService {
     let body = JSON.stringify(diver);
     let token = localStorage.getItem('access_token');
     return this.http.put('/server/api/v1/divers/' + id, body,
-    {headers: new HttpHeaders().set('Authorization', 'Bearer ' + token)}
+    {headers: new HttpHeaders().set('Authorization', 'Bearer ' + token).set('Content-Type', 'application/json')}
     );
   }
 

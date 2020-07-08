@@ -11,7 +11,8 @@ export class AuthService {
     domain: 'carterfa.us.auth0.com',
     responseType: 'token id_token',
     audience: 'https://diver-registry.herokuapp.com/',
-    redirectUri: 'https://diver-angular-ui.herokuapp.com/callback',
+    //redirectUri: 'https://diver-angular-ui.herokuapp.com/callback',
+    redirectUri: 'http://localhost:4200/callback',
     scope: 'openid view:registration view:registrations'
   });
 

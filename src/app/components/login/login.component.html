@@ -1,4 +1,7 @@
-<div class="container" style="height: 100vh">
+<div class="container">
+  <div class="row">
+    <a routerLink="/"><button class="btn btn-secondary back-btn">Back</button></a>
+  </div>
   <form [formGroup]="loginform" (ngSubmit)="submitLogin()" novalidate>
 <div class="form-group">
   <label>DiveIn ID</label>

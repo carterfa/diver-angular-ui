@@ -1,40 +1,55 @@
 <div class="container" *ngIf="diverReg">
   <div class="row">
-    <a class="btn btn=primary" routerLink="/admin"><button class="btn btn-danger back-btn">Back to List</button></a>
+    <a routerLink="/admin"><button class="btn btn-secondary back-btn">Back to List</button></a>
   </div>
-  <div>
+  <form [formGroup]="diverform" (ngSubmit)="submitUpdate()" novalidate>
     <div class="form-group">
       <label>Name</label>
-      <div class="form-control">{{diverReg.name}}</div>
+      <input type="text" class="form-control" formControlName="name" required autofocus/>
     </div>
     <div class="form-group">
       <label>Email</label>
-      <div class="form-control">{{diverReg.email}}</div>
+      <input type="email" class="form-control" formControlName="email" required/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="text" class="form-control" formControlName="password" required/>
     </div>
     <div class="form-group">
       <label>Phone</label>
-      <div class="form-control">{{diverReg.phone}}</div>
+      <input type="text" class="form-control" formControlName="phone" required/>
     </div>
     <div class="form-group">
       <label>Gender</label>
-      <div class="form-control">{{diverReg.gender}}</div>
+      <input class="form-control" formControlName="gender" required/>
     </div>
     <div class="form-group">
       <label>Birthday</label>
-      <div class="form-control">{{diverReg.birthday}}</div>
+      <input type="date" class="form-control" formControlName="birthday" required/>
     </div>
     <div class="form-group">
       <label>Certified Date</label>
-      <div class="form-control">{{diverReg.certified}}</div>
+      <input type="date" class="form-control" formControlName="certified" required/>
+    </div>
+    <div class="form-group">
+      <label>Total Dives</label>
+      <input type="number" class="form-control" formControlName="totalDives" required/>
     </div>
     <div class="form-group">
       <label>Organization</label>
-      <div class="form-control">{{diverReg.organization}}</div>
+      <input type="text" class="form-control" formControlName="organization" required/>
     </div>
     <div class="form-group">
       <label>Country</label>
-      <div class="form-control">{{diverReg.country}}</div>
+      <input type="text" class="form-control" formControlName="country" required/>
     </div>
-  </div>
+    <div *ngIf="validMessage != ''">
+      <h3 class="has-info">{{validMessage}}</h3>
+    </div>
+    <div style="text-align: center; margin-top: 2em"><button type="submit" class="btn btn-success register-btn" >UPDATE</button></div>
+  </form>
   <div style="text-align: center; margin: 2em"><button class="btn btn-danger" (click)="clickDelete()">DELETE</button></div>
+</div>
+<div class="row">
+  <a routerLink="/admin"><button class="btn btn-secondary back-btn">Back to List</button></a>
 </div>

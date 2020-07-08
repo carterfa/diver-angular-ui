@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="row">
+    <a routerLink="/"><button class="btn btn-secondary back-btn">Back</button></a>
+  </div>
   <form [formGroup]="diverform" (ngSubmit)="submitRegistration()" novalidate>
     <div class="form-group">
       <label>Name</label>
@@ -43,7 +46,10 @@
     <div *ngIf="validMessage != ''">
       <h3 class="has-info">{{validMessage}}</h3>
     </div>
-    <div style="text-align: center; margin-top: 2em"><button type="submit" class="btn btn-danger register-btn" >Register</button></div>
-
+    <div style="text-align: center; margin-top: 2em"><button type="submit" class="btn btn-danger register-btn" >Register</button>
+    </div>
   </form>
+  <div class="row">
+    <a routerLink="/"><button class="btn btn-secondary back-btn">Back</button></a>
+  </div>
 </div>
